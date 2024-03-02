@@ -1,9 +1,12 @@
 import './styles.css'
-import {Link} from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 import { FormEvent, useState } from 'react'
+import useAuth from '../../hooks/useAuth'
 
 function SingIn () {
+  const navigate = useNavigate()
+  const { handleGetToken, handleAddToken } = useAuth()
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -12,13 +15,17 @@ function SingIn () {
     event.preventDefault()
 
     try {
-      if(!email || !password){
-        throw new Error('Email and password is required.')
-      }
-      const response = api.post('/login', {
+      if(!email || !password) throw new Error('Email and password is required.')
+
+      const response = await api.post('/login', {
         email,
         password
       })
+
+      const { accessToken } = response.data
+
+      handleAddToken(accessToken)
+      navigate('./main')
     } catch (error) {
       return 'Internal error occurred.'
     }
@@ -29,8 +36,8 @@ function SingIn () {
       
     <div className="sign-in">
       <h1>Sua logo aqui!</h1>
-      <form onSubmit={handleSubmit}>
 
+      <form onSubmit={handleSubmit}>
         <input
         type="text"
         placeholder='E-mail'
