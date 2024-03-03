@@ -2,7 +2,7 @@ import './styles.css';
 
 function Main() {
   return (
-    <div>
+    <div className='container'>
       <h1>Hello World!</h1>
     </div>
   );

@@ -3,7 +3,6 @@ function useAuth() {
   function handleAddToken(token: string) {
     localStorage.setItem('token', token);
   }
-
   function handleClearToken() {
     localStorage.removeItem('token');
   }

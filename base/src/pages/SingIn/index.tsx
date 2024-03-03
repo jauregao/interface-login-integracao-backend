@@ -1,11 +1,12 @@
 import './styles.css'
 import { Link, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
-import { FormEvent, useState } from 'react'
+import { FormEvent, useEffect,useState } from 'react'
 import useAuth from '../../hooks/useAuth'
 
 function SingIn () {
   const navigate = useNavigate()
+
   const { handleGetToken, handleAddToken } = useAuth()
 
   const [email, setEmail] = useState('')
@@ -25,11 +26,22 @@ function SingIn () {
       const { accessToken } = response.data
 
       handleAddToken(accessToken)
+
       navigate('./main')
     } catch (error) {
       return 'Internal error occurred.'
     }
   }
+
+    useEffect(() => {
+    const token = handleGetToken();
+
+    if (token) {
+      navigate('/main');
+      return
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <div className='container container-sign-in'>
