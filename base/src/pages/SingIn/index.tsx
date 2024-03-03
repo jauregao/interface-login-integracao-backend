@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import api from '../../services/api'
 import { FormEvent, useEffect,useState } from 'react'
 import useAuth from '../../hooks/useAuth'
+import logo from '../../assets/logo.svg'
 
 function SingIn () {
   const navigate = useNavigate()
@@ -47,7 +48,7 @@ function SingIn () {
     <div className='container container-sign-in'>
       
     <div className="sign-in">
-      <h1>Sua logo aqui!</h1>
+      <img src={logo} alt="logo" />
 
       <form onSubmit={handleSubmit}>
         <input
