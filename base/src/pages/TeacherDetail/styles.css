@@ -1,0 +1,46 @@
+.teacher-detail {
+  width: 467px;
+  height: 562px;
+  background-color: #412062;
+  border-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 24px 54px;
+  margin: 92px 0;
+
+  color: #fff;
+}
+
+.teacher-detail h1 {
+  font-size: 28px;
+  margin: 24px 0 12px 0; 
+}
+
+.teacher-detail span {
+  font-size: 18px;
+  margin-bottom: 30px; 
+}
+
+.teacher-detail p {
+  font-size: 14px;
+  text-align: justify;
+  max-height: 150px;
+  padding: 5px;
+  overflow-y: auto;
+  margin-top: 25px;
+}
+
+.teacher-detail p::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff38;
+  border-radius: 5px;
+}
+
+.teacher-detail p::-webkit-scrollbar-thumb{
+  background-color: #ffffffa6;
+  border-radius: 5px;
+}
+  
