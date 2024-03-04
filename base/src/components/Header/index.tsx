@@ -7,15 +7,20 @@ type Props = {
   showArrowBack?: boolean
 }
 
-function Header (showArrowBack: Props){
+function Header ({ showArrowBack }: Props){
   const navigate = useNavigate()
 
   return(
     <header className='container-header'>
-      { showArrowBack &&
-        <img src={arrow} alt="arrow back" className='arrow-back'
-        onClick={()=> navigate(-1)}
+      {
+      showArrowBack &&
+        <img
+          src={arrow}
+          alt="arrow back"
+          className='arrow-back'
+          onClick={()=> navigate(-1)}
         />}
+
       <img src={logo} alt="logo" />
     </header>
   )

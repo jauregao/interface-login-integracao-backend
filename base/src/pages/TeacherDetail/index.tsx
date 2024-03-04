@@ -2,7 +2,6 @@ import './styles.css'
 import Header from '../../components/Header'
 import Avatar from '../../components/Avatar'
 import useTeacherDetail from '../../hooks/useTeacherDetail'
-import Teacher from '../../types/Teacher'
 
 function TeacherDetail() {
   const { currentTeacherDetail } = useTeacherDetail();

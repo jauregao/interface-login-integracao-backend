@@ -25,7 +25,7 @@ function Main() {
 
   return (
     <div className='container'>
-      <Header />
+      <Header/>
       
       <div className='main-teachers'>
         {allTeachers.map((teacher)=> (
