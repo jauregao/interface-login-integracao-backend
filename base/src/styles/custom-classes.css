@@ -4,5 +4,6 @@
   background-color: #843bcf;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

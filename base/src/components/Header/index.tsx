@@ -11,7 +11,7 @@ function Header (showArrowBack: Props){
   const navigate = useNavigate()
 
   return(
-    <header>
+    <header className='container-header'>
       { showArrowBack &&
         <img src={arrow} alt="arrow back" className='arrow-back'
         onClick={()=> navigate(-1)}
