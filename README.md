@@ -23,7 +23,7 @@ $ git clone https://github.com/jauregao/primeiro-projeto-frontend-typescript.git
 npm i
 ```
 
-**Rodando o projeto:**
+**Rodando o projeto:** </br> </br>
 Entre no diretório `api` e rode o comando.
 
 ```
@@ -43,8 +43,8 @@ npm start
 Após, uma aba será aberta no navegador.
 ![Pasted image 20240314165525](https://github.com/jauregao/primeiro-projeto-frontend-typescript/assets/132178067/92cc7d94-dad6-41bb-b9da-b5b507edd090)
 
-Para logar, use as seguintes credenciais:
-**email:** daniel.lopes@cubos.academy
+Para logar, use as seguintes credenciais:</br>
+**email:** daniel.lopes@cubos.academy</br>
 **senha:** daniel123
 
 
